@@ -1,0 +1,101 @@
+site_name: Заштита информационих система
+site_author: Велимир Радловачки
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Тамна тема
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Светла тема
+  favicon: images/icon.svg
+  icon:
+    logo: fontawesome/solid/graduation-cap
+  language: sr
+  features:
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+  font:
+    text: Roboto
+    code: Consolas
+copyright: Copyright &copy; 2024 Велимир Радловачки
+
+nav:
+  - Почетна: index.md
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.snippets
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - admonition
+  - pymdownx.details
+
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+          remove_comments: true
+      cache_safe: true
+  - glightbox
+
+hooks:
+  - C:\infosec_book\mkdocs-material\material\overrides\hooks\translations.py
+
+extra:
+  annotate:
+    json: [.s2]
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/radlovacki
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/velimirradlovacki/
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/velimir.radlovacki
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/radlovacki/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/c/VelimirRadlovački
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/radlovacki
+
+extra_javascript:
+  - javascript/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

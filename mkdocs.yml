@@ -23,13 +23,21 @@ theme:
     - content.code.copy
     - content.code.annotate
     - content.tabs.link
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
   font:
     text: Roboto
     code: Consolas
 copyright: Copyright &copy; 2024 Велимир Радловачки
 
 nav:
-  - Почетна: index.md
+  - Почетна:
+    - 00-Introduction/index.md
+  - Криптологија:
+    - 01-Cryptology/index.md
+    - 01-Cryptology/caesar_cipher_cs.md
 markdown_extensions:
   - attr_list
   - md_in_html

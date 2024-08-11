@@ -81,7 +81,7 @@ plugins:
   - glightbox
 
 hooks:
-  - C:\infosec_book\mkdocs-material\material\overrides\hooks\translations.py
+  - mkdocs-material\material\overrides\hooks\translations.py
 
 extra:
   annotate:
